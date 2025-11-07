@@ -1,0 +1,12 @@
+<div>
+    <h1>Personas</h1>
+    @if(personas){
+    <ul>
+        @for(per of personas; track per){
+        <li>
+            {{per.Nombre}}
+        </li>
+        }
+    </ul>
+    }
+</div>
