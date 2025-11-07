@@ -14,8 +14,14 @@ export class PersonasComponents implements OnInit {
   constructor(private _service:ServicePersonas){}
 
   ngOnInit():void{
-    this._service.getPersonas().subscribe(response=>{
-      this.personas=response;
+    // this._service.getPersonas().subscribe(response=>{
+    //   this.personas=response;
+    // })
+    // this._service.getPersonasAxios().then((response)=>{
+    //   this.personas=response.data;
+    // })
+    this._service.getPersonasFetch().then((data)=>{
+      this.personas=data;
     })
   }
 }
